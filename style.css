@@ -65,6 +65,11 @@ main {
     max-width: 1200px;
     /* Part 1 Exercise 9 */
     margin: auto; /*auto adds centering*/
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; wraps next container to the next line*/
+    /* justify-content: center;
+    align-items: stretch; */
 
 }
 
@@ -74,11 +79,32 @@ main {
     border: solid 4px #664b3d;
     /* Part 1 Exercise 7 */
     margin: 0 1% 40px 1%;
-    display: inline-block; /*one block used to take up entire width to the right*/
     vertical-align: top; /*aligns boxes at the top*/
+    /* display: inline-block; one block used to take up entire width to the right*/
 
 }
 
+@media (min-width: 799x) {
+    main {
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    }
+}
+
+@media (min-width: 800px) and (max-width:1099px) {
+.machine {
+    width: 46%;
+}
+}
+
+@media (min-width:1100px){
+    .machine {
+        width: 30%;
+        max-width: 450px;
+    }
+}
 /* Part 1 Exercise 8 */
 h3, p {
     padding: 0 30px;
